@@ -1,0 +1,62 @@
+{
+  "name": "vscode-open-in-gitfox",
+  "displayName": "Open in Gitfox",
+  "description": "Adds a command for opening the current project in Gitfox (a Git client).",
+  "icon": "resources/logo-128x128.png",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "out/src/extension.js",
+  "publisher": "singularitti",
+  "activationEvents": [
+    "onCommand:openInGitfox.open"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "openInGitfox.open",
+        "title": "Open in Gitfox"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "publish": "vsce publish && npm publish",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "bugs": {
+    "url": "https://github.com/singularitti/vscode-open-in-gitfox/issues"
+  },
+  "author": {
+    "name": "Reno",
+    "email": "singularitti@outlook.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/singularitti/vscode-open-in-gitfox"
+  },
+  "engines": {
+    "vscode": "^1.10.0"
+  },
+  "keywords": [
+    "vscode",
+    "vsc",
+    "extension",
+    "open in",
+    "gitfox"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "open": "0.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.40",
+    "tslint": "^4.4.2",
+    "typescript": "~2.2.0",
+    "vscode": "^1.1.4"
+  }
+}
